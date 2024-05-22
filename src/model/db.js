@@ -7,7 +7,7 @@ const sequelize = new Sequelize(
     dbConfig.PASSWORD,
     {
         host: dbConfig.HOST,
-        dialect: "mysql",
+        dialect: "postgresql",
         define: {
             timestamps: false
         }
