@@ -45,15 +45,15 @@ app.use(cors({
 
 // DB Sync
 
-//Usuario.belongsToMany(Forum, {through: 'conexao_usuario_forum', onDelete: 'cascade'})
-//Forum.belongsToMany(Usuario, {through: 'conexao_usuario_forum', onDelete: 'cascade'})
-//db.sync()
-//Usuario.sync({alter: true})
-//Forum.sync({alter: true})
-//Comentario.sync({alter: true})
-//Topico.sync({alter: true})
-// ConexaoUsuario.sync({alter: true})
-//ConexaoUsuarioForum.sync({alter: true})
+Usuario.belongsToMany(Forum, {through: 'conexao_usuario_forum', onDelete: 'cascade'})
+Forum.belongsToMany(Usuario, {through: 'conexao_usuario_forum', onDelete: 'cascade'})
+db.sync()
+Usuario.sync({alter: true})
+Forum.sync({alter: true})
+Comentario.sync({alter: true})
+Topico.sync({alter: true})
+ConexaoUsuario.sync({alter: true})
+ConexaoUsuarioForum.sync({alter: true})
 
 
 
