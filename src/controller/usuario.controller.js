@@ -35,7 +35,9 @@ const createUsuario = async (req, res, next) => {
             usuario: req.body.formUsuario,
             avatar: "/public/avatar/" + req.file.filename
         }
-        res.status(201).send(await UsuarioService.createUsuario(usuario))
+        let r = await UsuarioService.createUsuario(usuario)
+        console.log("Resultado: ===", r)
+        res.status(201).send(r)
     } catch (error) {
         next(error)
     }
